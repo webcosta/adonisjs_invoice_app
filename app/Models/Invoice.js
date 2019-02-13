@@ -5,15 +5,15 @@ const Model = use('Model')
 
 class Invoice extends Model {
     suppliers() {
-        return this.belongsTo('App/Models/Supplier','supplier', 'id')
+        return this.belongsTo('App/Models/Supplier','supplier_id', 'id')
     }
 
     decision() {
-        return this.belongsTo('App/Models/ManagerDecisionsUkr','decision','id')
+        return this.belongsTo('App/Models/ManagerDecisionsUkr','decision_id','id')
     }
 
     status () {
-        return this.belongsTo('App/Models/InvoiceStatusUkr','status','id')
+        return this.belongsTo('App/Models/InvoiceStatusUkr','status_id','id')
     }
     
 }
